@@ -42,7 +42,7 @@ services:
       - "6379:6379"
     command: redis-server /usr/local/etc/redis/redis.conf
     volumes:
-      # - ./redis/data:/data #挂载数据目录到本地
+      - ./redis/data:/data #挂载数据目录到本地
       - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
     networks:
       app_net:
